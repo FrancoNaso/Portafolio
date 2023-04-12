@@ -8,6 +8,7 @@ body {
     line-height: 1.5;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
+
 }
 
 body.hidden-scrolling {
@@ -18,6 +19,7 @@ body.hidden-scrolling {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -36,13 +38,14 @@ a {
 }
 
 /*header*/
-.header {
-    width: 100%;
-    left: 0;
-    top: 0;
-    z-index: 99;
-    padding: 15px;
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
 }
+
+
+
 
 .header-main {
     background-color: #ffffff;
@@ -241,7 +244,8 @@ main .hero {
     align-items: center;
     justify-content: center;
     gap: 5rem;
-    height: 70vh;
+    height: 80vh;
+
 }
 
 .inf {
@@ -254,7 +258,8 @@ main .hero {
     font-style: bold;
     font-weight: 900;
 }
-.button{
+
+.button {
     font-family: Roboto, sans-serif;
     font-weight: 0;
     font-size: 14px;
@@ -264,23 +269,204 @@ main .hero {
     border: 2px solid #0066cc;
     box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
     border-radius: 50px;
-    transition : 1000ms;
+    transition: 1000ms;
     transform: translateY(0);
     display: flex;
     flex-direction: row;
     align-items: center;
     cursor: pointer;
-    }
-    
-    .button:hover{
-    
-    transition : 1000ms;
+}
+
+.button:hover {
+
+    transition: 1000ms;
     padding: 10px 50px;
-    transform : translateY(-0px);
+    transform: translateY(-0px);
     background-color: #fff;
     color: #0066cc;
     border: solid 2px #0066cc;
-    }
+}
+
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+
+}
+
+#conocimientos ul {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#conocimientos ul li a img {
+    width: 100%;
+    height: 100px;
+
+
+}
+
+#conocimientos h3{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px; 
+    background-color: var(--color-primario);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 5rem;
+
+}
+
+
+#inferior {
+    /*background-image: url(./img/patrones-con-ilustraciones-neon_3840x2160_xtrafondos.com.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+
+}
+
+#inferior h3 {
+    background-color: var(--color-primario);
+    padding: .5rem 1rem;
+    border-radius: 20px;
+}
+
+/*INICIO DE LAS CARD*/
+
+.container__card {
+    max-width: 1200px;
+    padding: 20px;
+    padding-bottom: 40px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.card {
+    width: 300px;
+    position: relative;
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 500ms;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 20px -10px #202020;
+    margin-top: 100px;
+}
+
+.card:hover .info__description {
+    margin-top: 0;
+    border-radius: 0px 0px 20px 20px;
+
+}
+
+.card:hover .icon {
+    margin-top: -110px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.icon {
+    width: 100%;
+    height: 220px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 600ms cubic-bezier(0.5, 0, 0, 1);
+    border-radius: 20px;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    transition: all 600ms cubic-bezier(0.5, 0, 0, 1);
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.info__description {
+    width: 100%;
+    height: 200px;
+    color: #474747;
+    background: #ffffff;
+    padding: 20px;
+    margin-top: -220px;
+    transition: all 600ms cubic-bezier(0.5, 0, 0, 1);
+    border-radius: 20px;
+    padding-top: 2.5rem;
+}
+
+.info__description p {
+    font-size: 14px;
+    margin-top: 10px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+    overflow: hidden;
+}
+
+.info__description a {
+    margin-top: 20px;
+    padding: 10px 40px;
+    background: #2196f3;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 1px 30px -5px #20202049;
+    transition: box-shadow 300ms;
+    display: flex;
+
+}
+
+.info__description a:hover {
+    box-shadow: 1px 1px 30px -5px #20202070;
+    width: 100%;
+    text-align: end;
+}
+
+footer {
+    background-color: #fff;
+    color: var(--color-primario);
+    font-size: 20px;
+    font-weight: 900;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p {
+    font-size: 30px;
+    cursor: pointer;
+}
+
 
 /* responsive */
 
@@ -367,11 +553,11 @@ main .hero {
     }
 
 
-    main img {
+    .hero img {
         display: none;
     }
 
-    .inf{
+    .inf {
         padding: 2rem;
     }
 }

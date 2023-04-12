@@ -88,4 +88,6 @@ const typed = new Typed(".typed",{
 
 });
 
+AOS.init();
+
 
