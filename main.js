@@ -68,7 +68,8 @@ const typed = new Typed(".typed",{
         "SASS",
         "BOOSTRAP",
         "PHP",
-        "MySql"
+        "MySql",
+        "Git"
     ],
     stringsElements:"#cadenas-texto",
     typeSpeed:75,
