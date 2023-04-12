@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
-:root{
-    --color-primario:#0066ff;
+
+:root {
+    --color-primario: #0066ff;
 }
+
 body {
     line-height: 1.5;
     font-family: 'Raleway', sans-serif;
@@ -14,6 +16,7 @@ body.hidden-scrolling {
 
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -115,7 +118,7 @@ a {
 
 .header .menu>.menu-item>.sub-menu>.menu-item>a:hover,
 .header .menu>.menu-item:hover>a {
-    color:var(--color-primario);
+    color: var(--color-primario);
 }
 
 .header .menu>.menu-item>.sub-menu {
@@ -225,10 +228,59 @@ a {
 }
 
 
-#menu{
+#menu {
     display: flex;
 }
 
+main img {
+    width: 20vw;
+}
+
+main .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    height: 70vh;
+}
+
+.inf {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.inf .typed {
+    color: #0066ff;
+    font-style: bold;
+    font-weight: 900;
+}
+.button{
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: #0066CC;
+    padding: 10px 30px;
+    border: 2px solid #0066cc;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    transition : 1000ms;
+    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    }
+    
+    .button:hover{
+    
+    transition : 1000ms;
+    padding: 10px 50px;
+    transform : translateY(-0px);
+    background-color: #fff;
+    color: #0066cc;
+    border: solid 2px #0066cc;
+    }
 
 /* responsive */
 
@@ -312,5 +364,14 @@ a {
     .header .close-nav-menu,
     .header .open-nav-menu {
         display: flex;
+    }
+
+
+    main img {
+        display: none;
+    }
+
+    .inf{
+        padding: 2rem;
     }
 }
