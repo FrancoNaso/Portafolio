@@ -102,3 +102,30 @@ window.addEventListener("scroll", () => {
   }
   document.querySelector(".front").style.opacity = opacity;
 });
+
+
+
+const btnMode = document.querySelector(".sunMoon");
+const cambiantes = document.querySelectorAll(".cambiante");
+btnMode.addEventListener("click",()=>{
+
+    if(btnMode.style.transform === "translateX(0px)"){
+        btnMode.style.transform = "translateX(35px)";
+        btnMode.innerHTML='<i class="bi bi-moon-fill"></i>'
+    }else{
+        btnMode.style.transform = "translateX(0px)";
+        btnMode.innerHTML='<i class="bi bi-brightness-high-fill"></i>'
+    }
+
+
+    cambiantes.forEach(cambiante=>{
+
+cambiante.classList.toggle("darkMode");
+
+
+
+
+
+})
+
+})
