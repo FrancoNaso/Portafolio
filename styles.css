@@ -166,7 +166,7 @@ section {
 
 .card:hover {
     box-shadow: 1px 1px 20px -10px #202020;
-    margin-top: 100px;
+    margin-top: 200px;
 }
 
 .card:hover .info__description {
